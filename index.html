@@ -3,259 +3,261 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>Latitude, maison de bougies</title>
+  <title>Latitude, bougies de lieux</title>
   <meta name="claude:viewport-fit-sides" content="cover">
   <meta name="description" content="Six bougies parfumées, six lieux. Conçues et coulées à la main en France. Allumez un lieu.">
+  <meta property="og:title" content="Latitude, bougies de lieux">
+  <meta property="og:description" content="Six bougies parfumées, six lieux. Conçues et coulées à la main en France. Allumez un lieu.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;1,6..96,400&family=IBM+Plex+Mono:wght@300;400&family=Jost:wght@300;400;500&display=swap">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;1,6..96,400&family=IBM+Plex+Mono:wght@300&family=Jost:wght@300;400&display=swap">
+  <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
+  
+  <p class="announce">Première série numérotée · 100 exemplaires par lieu · Livraison offerte dès 80 €</p>
   <header class="site-header">
     <nav class="nav wrap" aria-label="Navigation principale">
-      <a href="#top" class="brand">LATITUDE</a>
-      <button class="nav-toggle" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu">
-        <span></span><span></span>
-      </button>
-      <ul class="nav-links" id="menu">
-        <li><a href="#collection">Collection</a></li>
-        <li><a href="#atlas">Atlas</a></li>
-        <li><a href="#maison">La maison</a></li>
-        <li><a href="#rituel">Rituel</a></li>
-        <li><a href="#serie" class="nav-cta">Première série</a></li>
-      </ul>
+      <div>
+        <button class="nav-toggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="menu"><span></span><span></span></button>
+        <ul class="nav-links" id="menu">
+          <li><a href="#collection">Collection</a></li>
+          <li><a href="#coffret">Coffret</a></li>
+          <li><a href="#maison">La maison</a></li>
+        </ul>
+      </div>
+      <a href="./" class="brand">LATITUDE</a>
+      <div class="nav-end">
+        <button type="button" class="cart-btn" data-open-cart aria-controls="cart">
+          <span class="cart-label">Panier</span><span class="cart-count" hidden>0</span>
+          <span class="visually-hidden">Ouvrir le panier</span>
+        </button>
+      </div>
     </nav>
   </header>
-
-  <main id="top">
-    <!-- ============ HERO ============ -->
-    <section class="hero wrap">
-      <div class="hero-text">
-        <p class="mono eyebrow">Maison de bougies · Conçues et coulées en France</p>
-        <h1>Allumez<br>un lieu.</h1>
-        <p class="lede">Six bougies, six endroits qui comptent pour nous. Une île des Cyclades, un village des Corbières, un appartement parisien un dimanche d’hiver. Allumer une bougie, c’est y retourner.</p>
-        <div class="hero-actions">
-          <a href="#collection" class="btn btn-ink">Découvrir la collection</a>
-          <a href="#serie" class="btn btn-line">Réserver la première série</a>
-        </div>
-      </div>
-
-      <figure class="hero-stage" id="hero-stage" aria-label="La collection en rotation">
-        <div class="stage-jar" id="hero-jar"></div>
-        <figcaption class="stage-caption mono">
-          <span id="hero-caption">ANAFI · Midi · Lot n° 001</span>
-          <span class="stage-dots" id="hero-dots" role="group" aria-label="Choisir un lieu"></span>
-        </figcaption>
-      </figure>
-    </section>
-
-    <!-- ============ COLLECTION ============ -->
-    <section id="collection" class="section wrap">
-      <header class="section-head">
-        <p class="mono eyebrow">La collection fondatrice</p>
-        <h2>Une journée entière, de la brume du matin à la forêt après la pluie.</h2>
-        <p class="section-intro">Chaque bougie porte une heure du jour. Choisissez un moment.</p>
-      </header>
-
-      <div class="day" role="tablist" aria-label="Les six lieux, dans l’ordre de la journée" id="day"></div>
-
-      <article class="fiche" id="fiche" role="tabpanel" aria-live="polite">
-        <div class="fiche-visual">
-          <div class="fiche-jar" id="fiche-jar"></div>
-          <p class="mono fiche-matter" id="fiche-matter"></p>
-        </div>
-        <div class="fiche-body">
-          <p class="mono eyebrow" id="fiche-moment"></p>
-          <h3 class="place-name" id="fiche-name"></h3>
-          <p class="mono coords" id="fiche-coords"></p>
-          <blockquote class="phrase" id="fiche-phrase"></blockquote>
-          <p class="fiche-desc" id="fiche-desc"></p>
-
-          <dl class="pyramid">
-            <div><dt class="mono">Tête</dt><dd id="fiche-tete"></dd></div>
-            <div><dt class="mono">Cœur</dt><dd id="fiche-coeur"></dd></div>
-            <div><dt class="mono">Fond</dt><dd id="fiche-fond"></dd></div>
-          </dl>
-
-          <p class="mono specs" id="fiche-specs"></p>
-          <div class="fiche-actions">
-            <a href="#serie" class="btn btn-ink" id="fiche-cta">Réserver</a>
-            <span class="mono price">Prix à venir</span>
+  <main>
+    <section class="hero-wrap">
+      <div class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">Bougies parfumées · Coulées à la main en France</p>
+          <h1>Allumez<br>un <em>lieu</em>.</h1>
+          <p class="lede">Une île des Cyclades, un village des Corbières, un dimanche d’hiver à Paris. Six bougies pour retourner là où l’on a été heureux.</p>
+          <div class="hero-actions">
+            <a href="#collection" class="btn">Découvrir la collection</a>
+            <a href="#coffret" class="link">Le coffret</a>
           </div>
         </div>
-      </article>
-    </section>
-
-    <!-- ============ ATLAS ============ -->
-    <section id="atlas" class="section section-alt">
-      <div class="wrap">
-        <header class="section-head">
-          <p class="mono eyebrow">L’atlas</p>
-          <h2>Chaque étiquette porte les coordonnées exactes du lieu.</h2>
-          <p class="section-intro">Touchez un point pour ouvrir sa fiche.</p>
-        </header>
-
-        <div class="atlas">
-          <div class="map" id="map">
-            <svg class="graticule" id="graticule" viewBox="0 0 700 380" preserveAspectRatio="none" aria-hidden="true"></svg>
-            <div class="inset" id="inset">
-              <span class="mono inset-title">Encart · Amérique centrale</span>
-            </div>
-            <span class="mono map-scale">Projection plate · graduations tous les 5°</span>
+        <div class="hero-media">
+          <div class="hero-slide" data-name="ANAFI" data-coords="36°21′N · 25°46′E" data-href="bougies/anafi.html">
+            <div class="visual" data-scene="anafi" data-photo="images/anafi/lieu.jpg" data-alt="Anafi"></div>
           </div>
-
-          <ol class="logbook" id="logbook" aria-label="Carnet de bord"></ol>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ LA MAISON ============ -->
-    <section id="maison" class="section wrap">
-      <header class="section-head">
-        <p class="mono eyebrow">La maison</p>
-        <h2>Une marque de bougies se copie. Une histoire de couple, non.</h2>
-      </header>
-
-      <div class="pillars">
-        <div class="pillar">
-          <h3>L’intime</h3>
-          <p>Chaque lieu est un souvenir réel. Dans chaque boîte, une carte postale écrite par nous deux raconte pourquoi celui-ci.</p>
-        </div>
-        <div class="pillar">
-          <h3>Le voyage</h3>
-          <p>Un atlas, des coordonnées, un tampon. La collection s’agrandit comme un carnet qu’on remplit, un lieu après l’autre.</p>
-        </div>
-        <div class="pillar">
-          <h3>L’artisanat</h3>
-          <p>Coulées à la main en petites séries numérotées. Cire végétale, mèche en coton, parfums de Grasse conformes IFRA.</p>
-        </div>
-      </div>
-
-      <div class="box">
-        <div class="box-copy">
-          <p class="mono eyebrow">Dans la boîte</p>
-          <h3 class="box-title">Le luxe se joue à l’ouverture.</h3>
-          <ul class="box-list">
-            <li><span class="mono">Le contenant</span>Verre épais teinté de la couleur du lieu, couvercle en chêne. Le nom est gravé sur le pot, qui reste beau une fois la bougie finie.</li>
-            <li><span class="mono">La boîte</span>Papier texturé ivoire, marquage à chaud or. Sous le couvercle, la carte du lieu et un point à l’endroit précis.</li>
-            <li><span class="mono">La carte postale</span>Au dos, quelques lignes de notre main : pourquoi ce lieu.</li>
-            <li><span class="mono">Le tampon</span>Comme un visa, avec la date de coulage et le numéro de lot écrit à la main.</li>
-          </ul>
-        </div>
-        <div class="box-visual" aria-hidden="true">
-          <div class="postcard">
-            <div class="postcard-left">
-              <p class="postcard-text">Pourquoi Anafi. Parce qu’on y est arrivés par le dernier bateau, et qu’on a failli ne jamais repartir.</p>
-              <p class="postcard-sign">L. &amp; …</p>
-            </div>
-            <div class="postcard-right">
-              <div class="stamp">
-                <span class="stamp-ring mono">ENTRÉE AUTORISÉE · ENTRÉE AUTORISÉE ·</span>
-                <span class="stamp-name">ANAFI</span>
-                <span class="stamp-date mono" id="stamp-date">01·11·26</span>
-              </div>
-              <span class="postcard-lines"></span>
-              <span class="postcard-lines"></span>
-              <span class="postcard-lines"></span>
-            </div>
+          <div class="hero-slide" data-name="MOUX" data-coords="43°10′53″N · 2°39′08″E" data-href="bougies/moux.html">
+            <div class="visual" data-scene="moux" data-photo="images/moux/lieu.jpg" data-alt="Moux"></div>
           </div>
+          <div class="hero-slide" data-name="PARIS" data-coords="48°51′N · 2°21′E" data-href="bougies/paris.html">
+            <div class="visual" data-scene="paris" data-photo="images/paris/lieu.jpg" data-alt="Paris"></div>
+          </div>
+          <div class="hero-slide on" data-name="FRÉGENEUIL" data-coords="45°38′N · 0°10′E" data-href="bougies/fregeneuil.html">
+            <div class="visual" data-scene="fregeneuil" data-photo="images/fregeneuil/lieu.jpg" data-alt="Frégeneuil"></div>
+          </div>
+          <div class="hero-slide" data-name="SAARAH" data-coords="Coordonnées à venir" data-href="bougies/saarah.html">
+            <div class="visual" data-scene="saarah" data-photo="images/saarah/lieu.jpg" data-alt="Saarah"></div>
+          </div>
+          <div class="hero-slide" data-name="COSTA RICA" data-coords="≈ 10°N · 84°W" data-href="bougies/costa-rica.html">
+            <div class="visual" data-scene="costa-rica" data-photo="images/costa-rica/lieu.jpg" data-alt="Costa Rica"></div>
+          </div>
+          <p class="hero-cap" id="hero-cap"></p>
         </div>
       </div>
     </section>
 
-    <!-- ============ RITUEL ============ -->
-    <section id="rituel" class="section section-alt">
-      <div class="wrap rituel">
-        <header class="section-head">
-          <p class="mono eyebrow">Le rituel</p>
-          <h2>Quatre gestes pour que la bougie dure ses 45 heures.</h2>
-        </header>
-        <ol class="steps">
-          <li><span class="mono step-n">I</span><h3>Première combustion</h3><p>Laissez fondre toute la surface, deux à trois heures. La cire ne creusera pas de tunnel.</p></li>
-          <li><span class="mono step-n">II</span><h3>La mèche</h3><p>Recoupez-la à 5 mm avant chaque allumage. La flamme reste calme et ne fume pas.</p></li>
-          <li><span class="mono step-n">III</span><h3>L’extinction</h3><p>Avec le couvercle ou un éteignoir. Jamais en soufflant.</p></li>
-          <li><span class="mono step-n">IV</span><h3>Après</h3><p>Nettoyez le pot à l’eau chaude. Il devient un verre, un vase, une boîte à souvenirs.</p></li>
-        </ol>
+    <div class="promise"><ul class="wrap">
+      <li>Coulée à la main en France</li><li>Cire végétale</li><li>Parfums de Grasse</li><li>Pot réutilisable</li><li>Livraison offerte dès 80 €</li>
+    </ul></div>
+
+    <section class="section wrap" id="collection">
+      <div class="section-head">
+        <div class="stack"><p class="eyebrow">La collection</p><h2>Six lieux, une journée.</h2></div>
+        <p class="intro">Chaque bougie porte une heure du jour, de la brume du matin à la forêt après la pluie.</p>
+      </div>
+      <div class="grid">
+        <article class="card">
+          <a class="card-media" href="bougies/fregeneuil.html" aria-label="Frégeneuil, voir la bougie">
+            <span class="card-moment">7 h · Matin</span>
+            <div class="visual" data-scene="fregeneuil" data-photo="images/fregeneuil/lieu.jpg" data-alt="Frégeneuil"></div>
+            <div class="packshot" style="--c:#8FA89A" data-jar="fregeneuil" data-photo="images/fregeneuil/bougie.jpg"></div>
+          </a>
+          <div class="card-info">
+            <a href="bougies/fregeneuil.html" class="card-name">FRÉGENEUIL</a>
+            <span class="card-price">58 €</span>
+            <p class="card-sub">Herbe des berges, saule, iris. Une bougie fraîche et verte pour les premières heures.</p>
+          </div>
+          <button type="button" class="card-add" data-add="fregeneuil" data-format="200">Ajouter au panier</button>
+        </article>
+        <article class="card">
+          <a class="card-media" href="bougies/anafi.html" aria-label="Anafi, voir la bougie">
+            <span class="card-moment">12 h · Midi</span>
+            <div class="visual" data-scene="anafi" data-photo="images/anafi/lieu.jpg" data-alt="Anafi"></div>
+            <div class="packshot" style="--c:#2F5D8A" data-jar="anafi" data-photo="images/anafi/bougie.jpg"></div>
+          </a>
+          <div class="card-info">
+            <a href="bougies/anafi.html" class="card-name">ANAFI</a>
+            <span class="card-price">58 €</span>
+            <p class="card-sub">Sel marin, figuier, thym sauvage. La lumière de midi sur une île des Cyclades.</p>
+          </div>
+          <button type="button" class="card-add" data-add="anafi" data-format="200">Ajouter au panier</button>
+        </article>
+        <article class="card">
+          <a class="card-media" href="bougies/moux.html" aria-label="Moux, voir la bougie">
+            <span class="card-moment">17 h · Fin d’après-midi</span>
+            <div class="visual" data-scene="moux" data-photo="images/moux/lieu.jpg" data-alt="Moux"></div>
+            <div class="packshot" style="--c:#6B6B3A" data-jar="moux" data-photo="images/moux/bougie.jpg"></div>
+          </a>
+          <div class="card-info">
+            <a href="bougies/moux.html" class="card-name">MOUX</a>
+            <span class="card-price">58 €</span>
+            <p class="card-sub">Ciste, olivier, cyprès. La garrigue des Corbières quand la lumière devient dorée.</p>
+          </div>
+          <button type="button" class="card-add" data-add="moux" data-format="200">Ajouter au panier</button>
+        </article>
+        <article class="card">
+          <a class="card-media" href="bougies/saarah.html" aria-label="Saarah, voir la bougie">
+            <span class="card-moment">20 h · Crépuscule</span>
+            <div class="visual" data-scene="saarah" data-photo="images/saarah/lieu.jpg" data-alt="Saarah"></div>
+            <div class="packshot" style="--c:#C98B4E" data-jar="saarah" data-photo="images/saarah/bougie.jpg"></div>
+          </a>
+          <div class="card-info">
+            <a href="bougies/saarah.html" class="card-name">SAARAH</a>
+            <span class="card-price">58 €</span>
+            <p class="card-sub">Cardamome, ambre, santal. La chaleur du sable quand le soleil disparaît.</p>
+          </div>
+          <button type="button" class="card-add" data-add="saarah" data-format="200">Ajouter au panier</button>
+        </article>
+        <article class="card">
+          <a class="card-media" href="bougies/paris.html" aria-label="Paris, voir la bougie">
+            <span class="card-moment">21 h · Soirée d’hiver</span>
+            <div class="visual" data-scene="paris" data-photo="images/paris/lieu.jpg" data-alt="Paris"></div>
+            <div class="packshot" style="--c:#5E6166" data-jar="paris" data-photo="images/paris/bougie.jpg"></div>
+          </a>
+          <div class="card-info">
+            <a href="bougies/paris.html" class="card-name">PARIS</a>
+            <span class="card-price">58 €</span>
+            <p class="card-sub">Iris poudré, thé noir, parquet ciré. Un appartement haussmannien quand il fait froid dehors.</p>
+          </div>
+          <button type="button" class="card-add" data-add="paris" data-format="200">Ajouter au panier</button>
+        </article>
+        <article class="card">
+          <a class="card-media" href="bougies/costa-rica.html" aria-label="Costa Rica, voir la bougie">
+            <span class="card-moment">Nuit · Après la pluie</span>
+            <div class="visual" data-scene="costa-rica" data-photo="images/costa-rica/lieu.jpg" data-alt="Costa Rica"></div>
+            <div class="packshot" style="--c:#2E4A32" data-jar="costa-rica" data-photo="images/costa-rica/bougie.jpg"></div>
+          </a>
+          <div class="card-info">
+            <a href="bougies/costa-rica.html" class="card-name">COSTA RICA</a>
+            <span class="card-price">58 €</span>
+            <p class="card-sub">Feuilles mouillées, café, cacao. La forêt tropicale juste après l’averse.</p>
+          </div>
+          <button type="button" class="card-add" data-add="costa-rica" data-format="200">Ajouter au panier</button>
+        </article>
       </div>
     </section>
 
-    <!-- ============ COFFRET ============ -->
-    <section class="section wrap coffret">
-      <div class="coffret-copy">
-        <p class="mono eyebrow">Coffret Atlas</p>
-        <h2>Les six lieux en format voyage.</h2>
-        <p>Six bougies de 70 g dans une boîte qui se déplie comme une carte. Pour choisir son lieu, ou pour offrir la journée entière.</p>
-        <p class="mono specs">6 × 70 g · env. 15 h chacune · Disponible à Noël</p>
-      </div>
-      <div class="coffret-row" id="coffret-row" aria-hidden="true"></div>
-    </section>
-
-    <!-- ============ PREMIÈRE SÉRIE / 7e LIEU ============ -->
-    <section id="serie" class="section section-ink">
-      <div class="wrap">
-        <header class="section-head">
-          <p class="mono eyebrow">Première série numérotée</p>
-          <h2>100 exemplaires par lieu. Pas un de plus.</h2>
-          <p class="section-intro">Inscrivez-vous pour être prévenu avant l’ouverture. Les numéros de lot sont attribués dans l’ordre des réservations.</p>
-        </header>
-
-        <div class="forms">
-          <form class="form" id="form-serie" novalidate>
-            <h3>Réserver un lieu</h3>
-            <div class="field">
-              <label for="s-name">Prénom</label>
-              <input id="s-name" name="name" type="text" autocomplete="given-name" required>
-              <small class="error"></small>
-            </div>
-            <div class="field">
-              <label for="s-email">Email</label>
-              <input id="s-email" name="email" type="email" autocomplete="email" required>
-              <small class="error"></small>
-            </div>
-            <div class="field">
-              <label for="s-place">Lieu</label>
-              <select id="s-place" name="place"></select>
-              <small class="error"></small>
-            </div>
-            <button class="btn btn-paper" type="submit">M’inscrire</button>
-            <p class="form-status" role="status" aria-live="polite"></p>
-          </form>
-
-          <form class="form" id="form-lieu" novalidate>
-            <h3>Le septième lieu</h3>
-            <p class="form-note">La collection s’agrandira. Proposez-nous un endroit et racontez-le en quelques lignes. Si c’est le vôtre qui est choisi, la première bougie vous revient.</p>
-            <div class="field">
-              <label for="l-place">Le lieu</label>
-              <input id="l-place" name="place" type="text" placeholder="Une plage, une rue, une cuisine…" required>
-              <small class="error"></small>
-            </div>
-            <div class="field">
-              <label for="l-why">Pourquoi</label>
-              <textarea id="l-why" name="why" rows="4" required></textarea>
-              <small class="error"></small>
-            </div>
-            <div class="field">
-              <label for="l-email">Email</label>
-              <input id="l-email" name="email" type="email" autocomplete="email" required>
-              <small class="error"></small>
-            </div>
-            <button class="btn btn-paper" type="submit">Proposer ce lieu</button>
-            <p class="form-status" role="status" aria-live="polite"></p>
-          </form>
+    <section class="section wrap" style="padding-top:0">
+      <div class="story">
+        <div class="visual" data-scene="moux" data-photo="images/moux/histoire.jpg"></div>
+        <div class="stack" style="gap:1.4rem">
+          <p class="eyebrow">Notre idée</p>
+          <h2>On ne vend pas une odeur. On vend un endroit.</h2>
+          <p class="story-quote">« La garrigue a gardé la chaleur. »</p>
+          <p>Chaque lieu de la collection est un souvenir réel. Nous l’avons traduit en parfum avec un nez de Grasse, puis coulé à la main en petites séries numérotées. Dans chaque boîte, une carte postale raconte pourquoi celui-ci.</p>
+          <a href="bougies/moux.html" class="link" style="align-self:flex-start">Lire l’histoire de Moux</a>
         </div>
+      </div>
+    </section>
+
+    <section class="section" id="coffret" style="background:var(--paper-2)">
+      <div class="wrap coffret">
+        <div class="stack" style="gap:1.4rem">
+          <p class="eyebrow">Coffret Atlas</p>
+          <h2>La journée entière, en format voyage.</h2>
+          <p>Les six lieux en bougies de 70 g, dans une boîte qui se déplie comme une carte. Pour trouver son lieu, ou pour l’offrir.</p>
+          <p class="price-lg">119 €</p>
+          <div><button type="button" class="btn" data-add="coffret-atlas">Ajouter le coffret</button></div>
+        </div>
+        <div class="coffret-visual" style="background:var(--paper)"><div data-jar="fregeneuil" data-mini="1" data-flame="0"></div><div data-jar="anafi" data-mini="1" data-flame="0"></div><div data-jar="moux" data-mini="1" data-flame="0"></div><div data-jar="saarah" data-mini="1" data-flame="0"></div><div data-jar="paris" data-mini="1" data-flame="0"></div><div data-jar="costa-rica" data-mini="1" data-flame="0"></div></div>
+      </div>
+    </section>
+
+    <section class="section wrap" id="maison">
+      <div class="section-head"><div class="stack"><p class="eyebrow">La maison</p><h2>Deux personnes, six lieux, un atelier.</h2></div></div>
+      <div class="maison">
+        <div><h3>L’intime</h3><p>Chaque lieu est le nôtre. Nous racontons pourquoi sur la carte postale glissée dans chaque boîte.</p></div>
+        <div><h3>Le voyage</h3><p>Le nom du lieu, ses coordonnées, un tampon. La collection grandit comme un carnet qu’on remplit.</p></div>
+        <div><h3>L’artisanat</h3><p>Coulées à la main en séries de cent, numérotées. Cire végétale, mèche en coton, pot à garder.</p></div>
+      </div>
+    </section>
+
+    <section class="section letter" id="lettre">
+      <div class="wrap letter-inner">
+        <div class="stack"><p class="eyebrow">Première série</p><h2>100 exemplaires par lieu.</h2><p>Inscrivez-vous pour être prévenu avant l’ouverture. Les numéros de lot partent dans l’ordre des inscriptions.</p></div>
+        <form class="inline-form" data-form="lettre" data-success="Merci. Vous serez prévenu avant tout le monde." novalidate>
+          <label class="visually-hidden" for="nl-email">Email</label>
+          <div class="row"><input id="nl-email" name="email" type="email" placeholder="Votre email" autocomplete="email"><button type="submit">M’inscrire</button></div>
+          <p class="form-status" role="status"></p>
+        </form>
       </div>
     </section>
   </main>
-
+  
   <footer class="site-footer">
-    <div class="wrap footer-inner">
-      <p class="brand">LATITUDE</p>
-      <p class="mono">Conçues et coulées à la main en France · Cire végétale · Parfums de Grasse conformes IFRA</p>
-      <p class="mono footer-small">© <span id="year">2026</span> Latitude · <a href="https://instagram.com/" target="_blank" rel="noopener">Instagram</a></p>
+    <div class="wrap">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="./" class="brand">LATITUDE</a>
+          <p>Bougies parfumées conçues et coulées à la main en France. Cire végétale, parfums de Grasse.</p>
+        </div>
+        <div><h4>Collection</h4><ul><li><a href="bougies/fregeneuil.html">Frégeneuil</a></li><li><a href="bougies/anafi.html">Anafi</a></li><li><a href="bougies/moux.html">Moux</a></li><li><a href="bougies/saarah.html">Saarah</a></li><li><a href="bougies/paris.html">Paris</a></li><li><a href="bougies/costa-rica.html">Costa Rica</a></li><li><a href="#coffret">Coffret Atlas</a></li></ul></div>
+        <div><h4>La maison</h4><ul><li><a href="#maison">Notre histoire</a></li><li><a href="#lettre">Première série</a></li><li><a href="https://instagram.com/" target="_blank" rel="noopener">Instagram</a></li></ul></div>
+        <div><h4>Aide</h4><ul><li>Expédition sous 48 h</li><li>Livraison offerte dès 80 €</li><li>Retours sous 14 jours</li><li>contact@latitude.fr</li></ul></div>
+      </div>
+      <div class="footer-legal"><span>© <span data-year>2026</span> Latitude</span><span>Conçu et coulé en France</span></div>
     </div>
   </footer>
-
-  <script src="script.js"></script>
+  
+  <div class="cart-overlay" id="cart-overlay"></div>
+  <aside class="cart" id="cart" aria-hidden="true" aria-labelledby="cart-title" role="dialog" aria-modal="true">
+    <div class="cart-head">
+      <h2 id="cart-title">Votre panier</h2>
+      <button type="button" class="cart-close">Fermer</button>
+    </div>
+    <p class="cart-added" id="cart-added" role="status" hidden></p>
+    <div class="cart-empty" id="cart-empty">
+      <p>Votre panier est vide. Choisissez un lieu.</p>
+      <a href="#collection" class="link cart-close-link">Voir la collection</a>
+    </div>
+    <div class="ship"><p id="ship-text"></p><div class="ship-bar" id="ship-bar"></div></div>
+    <div class="cart-body"><ul class="cart-items" id="cart-items"></ul></div>
+    <div class="cart-foot" id="cart-foot" hidden>
+      <div class="totals">
+        <span>Sous-total</span><span id="cart-subtotal"></span>
+        <span>Livraison</span><span id="cart-shipping"></span>
+        <span class="total">Total</span><span class="total" id="cart-total"></span>
+      </div>
+      <button type="button" class="btn btn-block" id="checkout">Commander</button>
+      <div class="precommande" id="precommande" hidden>
+        <p>La boutique ouvre avec la première série. Laissez votre email : nous vous écrirons avant l’ouverture et votre panier vous sera réservé.</p>
+        <form class="inline-form" data-form="precommande" data-success="C’est noté. Votre panier vous attend." novalidate>
+          <label class="visually-hidden" for="pre-email">Email</label>
+          <div class="row"><input id="pre-email" name="email" type="email" placeholder="Votre email" autocomplete="email"><button type="submit">Réserver</button></div>
+          <p class="form-status" role="status"></p>
+        </form>
+      </div>
+      <p class="cart-note">Paiement sécurisé · Expédition sous 48 h · Retours sous 14 jours</p>
+    </div>
+  </aside>
+  
+  <script src="assets/catalogue.js"></script>
+  <script src="assets/scenes.js"></script>
+  <script src="assets/app.js"></script>
 </body>
 </html>

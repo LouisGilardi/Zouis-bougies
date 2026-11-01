@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Saarah, bougie parfumée · Latitude</title>
+  <meta name="claude:viewport-fit-sides" content="cover">
+  <meta name="description" content="Cardamome, ambre, santal. La chaleur du sable quand le soleil disparaît. Bougie 200 g coulée à la main en France.">
+  <meta property="og:title" content="Saarah, bougie parfumée · Latitude">
+  <meta property="og:description" content="Cardamome, ambre, santal. La chaleur du sable quand le soleil disparaît. Bougie 200 g coulée à la main en France.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;1,6..96,400&family=IBM+Plex+Mono:wght@300&family=Jost:wght@300;400&display=swap">
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+  
+  <p class="announce">Première série numérotée · 100 exemplaires par lieu · Livraison offerte dès 80 €</p>
+  <header class="site-header">
+    <nav class="nav wrap" aria-label="Navigation principale">
+      <div>
+        <button class="nav-toggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="menu"><span></span><span></span></button>
+        <ul class="nav-links" id="menu">
+          <li><a href="../#collection">Collection</a></li>
+          <li><a href="../#coffret">Coffret</a></li>
+          <li><a href="../#maison">La maison</a></li>
+        </ul>
+      </div>
+      <a href="../" class="brand">LATITUDE</a>
+      <div class="nav-end">
+        <button type="button" class="cart-btn" data-open-cart aria-controls="cart">
+          <span class="cart-label">Panier</span><span class="cart-count" hidden>0</span>
+          <span class="visually-hidden">Ouvrir le panier</span>
+        </button>
+      </div>
+    </nav>
+  </header>
+  <main style="--c:#C98B4E">
+    <nav class="crumbs wrap" aria-label="Fil d’Ariane"><a href="../#collection">Collection</a><span>/</span><span>Saarah</span></nav>
+
+    <section class="product wrap">
+      <div class="gallery">
+        <div class="thumbs" role="group" aria-label="Choisir une image">
+          <button type="button" class="thumb" data-slide="lieu" aria-pressed="true" aria-label="Le lieu"><div class="visual" data-scene="saarah" data-photo="../images/saarah/lieu.jpg"></div></button>
+          <button type="button" class="thumb" data-slide="bougie" aria-pressed="false" aria-label="La bougie"><div class="packshot" style="--c:#C98B4E" data-jar="saarah" data-flame="0" data-photo="../images/saarah/bougie.jpg"></div></button>
+          <button type="button" class="thumb" data-slide="detail" aria-pressed="false" aria-label="La matière"><div class="visual" data-scene="saarah" data-variant="detail" data-photo="../images/saarah/detail.jpg"></div></button>
+        </div>
+        <div class="gallery-main" id="gallery-main">
+          <div class="gallery-slide on" data-slide="lieu"><div class="visual" data-scene="saarah" data-photo="../images/saarah/lieu.jpg" data-alt="Saarah, le lieu"></div><span class="gallery-cap">Le désert, au crépuscule</span></div>
+          <div class="gallery-slide" data-slide="bougie"><div class="packshot" style="--c:#C98B4E" data-jar="saarah" data-photo="../images/saarah/bougie.jpg" data-alt="Bougie Saarah"></div><span class="gallery-cap">Bougie 200 g · Lot n° 002</span></div>
+          <div class="gallery-slide" data-slide="detail"><div class="visual" data-scene="saarah" data-variant="detail" data-photo="../images/saarah/detail.jpg" data-alt="Sable fin, lumière rasante"></div><span class="gallery-cap">Sable fin, lumière rasante</span></div>
+        </div>
+      </div>
+
+      <div class="buy" data-buy>
+        <div class="stack" style="gap:.8rem">
+          <p class="eyebrow">20 h · Crépuscule</p>
+          <h1>SAARAH</h1>
+          <p class="coords">Coordonnées à venir · Lieu à préciser</p>
+        </div>
+        <p class="phrase">« L’heure où la dune devient rose. »</p>
+        <p class="accroche">Cardamome, ambre, santal. La chaleur du sable quand le soleil disparaît.</p>
+        <p class="price" id="price">58 €</p>
+
+        <fieldset class="formats">
+          <legend>Format</legend>
+          <label class="format"><input type="radio" name="format" value="200" checked><span>Bougie 200 g<small>env. 45 h · 58 €</small></span></label>
+          <label class="format"><input type="radio" name="format" value="70"><span>Mini 70 g<small>env. 15 h · 24 €</small></span></label>
+        </fieldset>
+
+        <div class="buy-row">
+          <div class="qty" aria-label="Quantité">
+            <button type="button" data-step="-1" aria-label="Diminuer la quantité">−</button>
+            <span data-qty-value aria-live="polite">1</span>
+            <button type="button" data-step="1" aria-label="Augmenter la quantité">+</button>
+          </div>
+          <button type="button" class="btn btn-block" id="add-main" data-add="saarah">Ajouter au panier</button>
+        </div>
+
+        <ul class="reassure">
+          <li>Coulée à la main, lot n° 002 numéroté</li>
+          <li>Expédiée sous 48 h dans sa boîte, avec sa carte postale</li>
+          <li>Livraison offerte dès 80 €</li>
+        </ul>
+
+        <div class="details">
+          <details open>
+            <summary>Notes olfactives</summary>
+            <div class="d-body"><dl class="notes"><dt>Tête</dt><dd>Cardamome, datte</dd><dt>Cœur</dt><dd>Encens, rose sèche</dd><dt>Fond</dt><dd>Ambre, santal</dd></dl></div>
+          </details>
+          <details>
+            <summary>Composition</summary>
+            <div class="d-body"><p>Cire végétale. Mèche en coton. Parfum composé à Grasse, conforme aux normes IFRA. Verre épais teinté, couvercle en chêne.</p><p>200 g, environ 45 heures de combustion.</p></div>
+          </details>
+          <details>
+            <summary>Le rituel</summary>
+            <div class="d-body"><p>Laissez fondre toute la surface à la première combustion, deux à trois heures. Recoupez la mèche à 5 mm avant chaque allumage. Éteignez avec le couvercle, jamais en soufflant. Une fois finie, lavez le pot à l’eau chaude et gardez-le.</p></div>
+          </details>
+          <details>
+            <summary>Livraison et retours</summary>
+            <div class="d-body"><p>Expédition sous 48 h depuis notre atelier. Livraison offerte dès 80 € en France métropolitaine, 6,90 € en dessous. Retours acceptés sous 14 jours pour une bougie non allumée.</p></div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section aria-labelledby="histoire">
+      <div class="visual tale-hero" data-scene="saarah" data-photo="../images/saarah/histoire.jpg" data-alt="Saarah"></div>
+      <div class="section wrap tale">
+        <div class="tale-aside">
+          <p class="eyebrow">L’histoire</p>
+          <h2 id="histoire">Pourquoi Saarah</h2>
+          <p class="coords">Le désert, au crépuscule<br>Coordonnées à venir</p>
+        </div>
+        <div class="tale-body"><p>Saarah, c’est une heure plus qu’un lieu. Le moment où le soleil touche l’horizon et où le sable passe de l’or au rose.</p><p>La chaleur remonte de la dune, l’air se charge d’épices. Un thé à la cardamome chauffe quelque part. On attend la nuit sans rien dire.</p><p>Une bougie ambrée et enveloppante, pour les soirs où l’on a besoin de chaleur.</p></div>
+      </div>
+      <blockquote class="tale-quote wrap">« L’heure où la dune devient rose. »</blockquote>
+    </section>
+
+    <section class="section wrap" style="padding-top:0" aria-labelledby="parfum">
+      <div class="section-head"><div class="stack"><p class="eyebrow">Le parfum</p><h2 id="parfum">Trois temps, comme une promenade.</h2></div><p class="intro">Les notes de tête s’ouvrent à l’allumage. Le cœur s’installe après quelques minutes. Le fond reste dans la pièce une fois la bougie éteinte.</p></div>
+      <div class="pyramid">
+        <div class="tier"><div class="visual" data-scene="saarah" data-variant="detail"></div><h3>Tête</h3><p>Cardamome, datte</p><small>À l’allumage</small></div>
+        <div class="tier"><div class="packshot" style="--c:#C98B4E;aspect-ratio:1"><div data-jar="saarah" data-flame="0" style="width:46%"></div></div><h3>Cœur</h3><p>Encens, rose sèche</p><small>Après quelques minutes</small></div>
+        <div class="tier"><div class="visual" data-scene="saarah"></div><h3>Fond</h3><p>Ambre, santal</p><small>Ce qui reste</small></div>
+      </div>
+    </section>
+
+    <a class="next" href="paris.html" style="--c:#5E6166" aria-label="Lieu suivant : Paris">
+      <div class="next-copy">
+        <p class="eyebrow">Continuer la journée · 21 h</p>
+        <h2>PARIS</h2>
+        <p>« Un dimanche de novembre, la lumière aux fenêtres. »</p>
+        <span class="link" style="align-self:flex-start">Découvrir</span>
+      </div>
+      <div class="visual" data-scene="paris" data-photo="../images/paris/lieu.jpg"></div>
+    </a>
+
+    <section class="section wrap">
+      <div class="section-head"><div class="stack"><p class="eyebrow">Les autres lieux</p><h2>Poursuivre le voyage.</h2></div><a class="link" href="../#collection">Toute la collection</a></div>
+      <div class="grid">
+        <article class="card">
+          <a class="card-media" href="fregeneuil.html" aria-label="Frégeneuil">
+            <span class="card-moment">7 h · Matin</span>
+            <div class="visual" data-scene="fregeneuil" data-photo="../images/fregeneuil/lieu.jpg"></div>
+            <div class="packshot" style="--c:#8FA89A" data-jar="fregeneuil" data-photo="../images/fregeneuil/bougie.jpg"></div>
+          </a>
+          <div class="card-info"><a href="fregeneuil.html" class="card-name">FRÉGENEUIL</a><span class="card-price">58 €</span><p class="card-sub">Herbe des berges, saule, iris. Une bougie fraîche et verte pour les premières heures.</p></div>
+          <button type="button" class="card-add" data-add="fregeneuil" data-format="200">Ajouter au panier</button>
+        </article>
+        <article class="card">
+          <a class="card-media" href="anafi.html" aria-label="Anafi">
+            <span class="card-moment">12 h · Midi</span>
+            <div class="visual" data-scene="anafi" data-photo="../images/anafi/lieu.jpg"></div>
+            <div class="packshot" style="--c:#2F5D8A" data-jar="anafi" data-photo="../images/anafi/bougie.jpg"></div>
+          </a>
+          <div class="card-info"><a href="anafi.html" class="card-name">ANAFI</a><span class="card-price">58 €</span><p class="card-sub">Sel marin, figuier, thym sauvage. La lumière de midi sur une île des Cyclades.</p></div>
+          <button type="button" class="card-add" data-add="anafi" data-format="200">Ajouter au panier</button>
+        </article>
+        <article class="card">
+          <a class="card-media" href="moux.html" aria-label="Moux">
+            <span class="card-moment">17 h · Fin d’après-midi</span>
+            <div class="visual" data-scene="moux" data-photo="../images/moux/lieu.jpg"></div>
+            <div class="packshot" style="--c:#6B6B3A" data-jar="moux" data-photo="../images/moux/bougie.jpg"></div>
+          </a>
+          <div class="card-info"><a href="moux.html" class="card-name">MOUX</a><span class="card-price">58 €</span><p class="card-sub">Ciste, olivier, cyprès. La garrigue des Corbières quand la lumière devient dorée.</p></div>
+          <button type="button" class="card-add" data-add="moux" data-format="200">Ajouter au panier</button>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <div class="sticky-buy" id="sticky-buy">
+    <div><p class="s-name">SAARAH</p><p class="coords" data-sticky-price>58 €</p></div>
+    <button type="button" class="btn" data-add="saarah" data-format="200">Ajouter</button>
+  </div>
+  
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="../" class="brand">LATITUDE</a>
+          <p>Bougies parfumées conçues et coulées à la main en France. Cire végétale, parfums de Grasse.</p>
+        </div>
+        <div><h4>Collection</h4><ul><li><a href="../bougies/fregeneuil.html">Frégeneuil</a></li><li><a href="../bougies/anafi.html">Anafi</a></li><li><a href="../bougies/moux.html">Moux</a></li><li><a href="../bougies/saarah.html">Saarah</a></li><li><a href="../bougies/paris.html">Paris</a></li><li><a href="../bougies/costa-rica.html">Costa Rica</a></li><li><a href="../#coffret">Coffret Atlas</a></li></ul></div>
+        <div><h4>La maison</h4><ul><li><a href="../#maison">Notre histoire</a></li><li><a href="../#lettre">Première série</a></li><li><a href="https://instagram.com/" target="_blank" rel="noopener">Instagram</a></li></ul></div>
+        <div><h4>Aide</h4><ul><li>Expédition sous 48 h</li><li>Livraison offerte dès 80 €</li><li>Retours sous 14 jours</li><li>contact@latitude.fr</li></ul></div>
+      </div>
+      <div class="footer-legal"><span>© <span data-year>2026</span> Latitude</span><span>Conçu et coulé en France</span></div>
+    </div>
+  </footer>
+  
+  <div class="cart-overlay" id="cart-overlay"></div>
+  <aside class="cart" id="cart" aria-hidden="true" aria-labelledby="cart-title" role="dialog" aria-modal="true">
+    <div class="cart-head">
+      <h2 id="cart-title">Votre panier</h2>
+      <button type="button" class="cart-close">Fermer</button>
+    </div>
+    <p class="cart-added" id="cart-added" role="status" hidden></p>
+    <div class="cart-empty" id="cart-empty">
+      <p>Votre panier est vide. Choisissez un lieu.</p>
+      <a href="../#collection" class="link cart-close-link">Voir la collection</a>
+    </div>
+    <div class="ship"><p id="ship-text"></p><div class="ship-bar" id="ship-bar"></div></div>
+    <div class="cart-body"><ul class="cart-items" id="cart-items"></ul></div>
+    <div class="cart-foot" id="cart-foot" hidden>
+      <div class="totals">
+        <span>Sous-total</span><span id="cart-subtotal"></span>
+        <span>Livraison</span><span id="cart-shipping"></span>
+        <span class="total">Total</span><span class="total" id="cart-total"></span>
+      </div>
+      <button type="button" class="btn btn-block" id="checkout">Commander</button>
+      <div class="precommande" id="precommande" hidden>
+        <p>La boutique ouvre avec la première série. Laissez votre email : nous vous écrirons avant l’ouverture et votre panier vous sera réservé.</p>
+        <form class="inline-form" data-form="precommande" data-success="C’est noté. Votre panier vous attend." novalidate>
+          <label class="visually-hidden" for="pre-email">Email</label>
+          <div class="row"><input id="pre-email" name="email" type="email" placeholder="Votre email" autocomplete="email"><button type="submit">Réserver</button></div>
+          <p class="form-status" role="status"></p>
+        </form>
+      </div>
+      <p class="cart-note">Paiement sécurisé · Expédition sous 48 h · Retours sous 14 jours</p>
+    </div>
+  </aside>
+  
+  <script src="../assets/catalogue.js"></script>
+  <script src="../assets/scenes.js"></script>
+  <script src="../assets/app.js"></script>
+</body>
+</html>
