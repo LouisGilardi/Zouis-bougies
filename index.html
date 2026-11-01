@@ -2,172 +2,257 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Prénom Nom — Portfolio</title>
-  <meta name="description" content="Portfolio de Prénom Nom, développeur web.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Latitude, maison de bougies</title>
+  <meta name="claude:viewport-fit-sides" content="cover">
+  <meta name="description" content="Six bougies parfumées, six lieux. Conçues et coulées à la main en France. Allumez un lieu.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;1,6..96,400&family=IBM+Plex+Mono:wght@300;400&family=Jost:wght@300;400;500&display=swap">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header class="site-header">
-    <nav class="nav container">
-      <a href="#accueil" class="logo">PN<span>.</span></a>
-      <button class="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu">
-        <span></span><span></span><span></span>
+    <nav class="nav wrap" aria-label="Navigation principale">
+      <a href="#top" class="brand">LATITUDE</a>
+      <button class="nav-toggle" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu">
+        <span></span><span></span>
       </button>
       <ul class="nav-links" id="menu">
-        <li><a href="#accueil">Accueil</a></li>
-        <li><a href="#projets">Projets</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#collection">Collection</a></li>
+        <li><a href="#atlas">Atlas</a></li>
+        <li><a href="#maison">La maison</a></li>
+        <li><a href="#rituel">Rituel</a></li>
+        <li><a href="#serie" class="nav-cta">Première série</a></li>
       </ul>
     </nav>
   </header>
 
-  <main>
-    <!-- Accueil -->
-    <section id="accueil" class="hero container">
-      <p class="eyebrow">Bonjour, je suis</p>
-      <h1>Prénom Nom</h1>
-      <h2 class="hero-sub">Développeur web &amp; designer d’interfaces.</h2>
-      <p class="hero-text">
-        Je conçois des sites et applications web simples, rapides et accessibles.
-        J’aime le code propre, les interfaces sobres et les projets qui ont du sens.
-      </p>
-      <div class="hero-actions">
-        <a href="#projets" class="btn btn-primary">Voir mes projets</a>
-        <a href="#contact" class="btn btn-ghost">Me contacter</a>
-      </div>
-    </section>
-
-    <!-- Projets -->
-    <section id="projets" class="section container">
-      <div class="section-head">
-        <h2 class="section-title">Projets</h2>
-        <div class="filters" role="group" aria-label="Filtrer les projets">
-          <button class="filter active" data-filter="all">Tous</button>
-          <button class="filter" data-filter="web">Web</button>
-          <button class="filter" data-filter="design">Design</button>
-          <button class="filter" data-filter="app">App</button>
+  <main id="top">
+    <!-- ============ HERO ============ -->
+    <section class="hero wrap">
+      <div class="hero-text">
+        <p class="mono eyebrow">Maison de bougies · Conçues et coulées en France</p>
+        <h1>Allumez<br>un lieu.</h1>
+        <p class="lede">Six bougies, six endroits qui comptent pour nous. Une île des Cyclades, un village des Corbières, un appartement parisien un dimanche d’hiver. Allumer une bougie, c’est y retourner.</p>
+        <div class="hero-actions">
+          <a href="#collection" class="btn btn-ink">Découvrir la collection</a>
+          <a href="#serie" class="btn btn-line">Réserver la première série</a>
         </div>
       </div>
 
-      <div class="projects-grid">
-        <article class="project-card" data-category="web">
-          <div class="project-thumb" style="--hue: 210">01</div>
-          <div class="project-body">
-            <h3>Site vitrine — Atelier Lumen</h3>
-            <p>Site responsive pour un studio photo, optimisé pour la performance et le SEO.</p>
-            <ul class="tags"><li>HTML</li><li>CSS</li><li>JS</li></ul>
-            <div class="project-links">
-              <a href="#" target="_blank" rel="noopener">Démo ↗</a>
-              <a href="#" target="_blank" rel="noopener">Code ↗</a>
-            </div>
-          </div>
-        </article>
+      <figure class="hero-stage" id="hero-stage" aria-label="La collection en rotation">
+        <div class="stage-jar" id="hero-jar"></div>
+        <figcaption class="stage-caption mono">
+          <span id="hero-caption">ANAFI · Midi · Lot n° 001</span>
+          <span class="stage-dots" id="hero-dots" role="group" aria-label="Choisir un lieu"></span>
+        </figcaption>
+      </figure>
+    </section>
 
-        <article class="project-card" data-category="app">
-          <div class="project-thumb" style="--hue: 160">02</div>
-          <div class="project-body">
-            <h3>Gestionnaire de tâches</h3>
-            <p>Application de to-do avec glisser-déposer et sauvegarde locale.</p>
-            <ul class="tags"><li>JavaScript</li><li>LocalStorage</li></ul>
-            <div class="project-links">
-              <a href="#" target="_blank" rel="noopener">Démo ↗</a>
-              <a href="#" target="_blank" rel="noopener">Code ↗</a>
-            </div>
-          </div>
-        </article>
+    <!-- ============ COLLECTION ============ -->
+    <section id="collection" class="section wrap">
+      <header class="section-head">
+        <p class="mono eyebrow">La collection fondatrice</p>
+        <h2>Une journée entière, de la brume du matin à la forêt après la pluie.</h2>
+        <p class="section-intro">Chaque bougie porte une heure du jour. Choisissez un moment.</p>
+      </header>
 
-        <article class="project-card" data-category="design">
-          <div class="project-thumb" style="--hue: 280">03</div>
-          <div class="project-body">
-            <h3>Identité visuelle — Café Nord</h3>
-            <p>Logo, palette et maquettes d’interface pour un café-librairie.</p>
-            <ul class="tags"><li>Figma</li><li>Branding</li></ul>
-            <div class="project-links">
-              <a href="#" target="_blank" rel="noopener">Voir ↗</a>
-            </div>
-          </div>
-        </article>
+      <div class="day" role="tablist" aria-label="Les six lieux, dans l’ordre de la journée" id="day"></div>
 
-        <article class="project-card" data-category="web">
-          <div class="project-thumb" style="--hue: 30">04</div>
-          <div class="project-body">
-            <h3>Blog statique</h3>
-            <p>Blog minimaliste généré à partir de fichiers Markdown, mode sombre inclus.</p>
-            <ul class="tags"><li>Markdown</li><li>CSS</li></ul>
-            <div class="project-links">
-              <a href="#" target="_blank" rel="noopener">Démo ↗</a>
-              <a href="#" target="_blank" rel="noopener">Code ↗</a>
-            </div>
-          </div>
-        </article>
+      <article class="fiche" id="fiche" role="tabpanel" aria-live="polite">
+        <div class="fiche-visual">
+          <div class="fiche-jar" id="fiche-jar"></div>
+          <p class="mono fiche-matter" id="fiche-matter"></p>
+        </div>
+        <div class="fiche-body">
+          <p class="mono eyebrow" id="fiche-moment"></p>
+          <h3 class="place-name" id="fiche-name"></h3>
+          <p class="mono coords" id="fiche-coords"></p>
+          <blockquote class="phrase" id="fiche-phrase"></blockquote>
+          <p class="fiche-desc" id="fiche-desc"></p>
 
-        <article class="project-card" data-category="app">
-          <div class="project-thumb" style="--hue: 340">05</div>
-          <div class="project-body">
-            <h3>Météo en temps réel</h3>
-            <p>Petite application consommant une API météo avec géolocalisation.</p>
-            <ul class="tags"><li>API</li><li>Fetch</li></ul>
-            <div class="project-links">
-              <a href="#" target="_blank" rel="noopener">Démo ↗</a>
-              <a href="#" target="_blank" rel="noopener">Code ↗</a>
-            </div>
-          </div>
-        </article>
+          <dl class="pyramid">
+            <div><dt class="mono">Tête</dt><dd id="fiche-tete"></dd></div>
+            <div><dt class="mono">Cœur</dt><dd id="fiche-coeur"></dd></div>
+            <div><dt class="mono">Fond</dt><dd id="fiche-fond"></dd></div>
+          </dl>
 
-        <article class="project-card" data-category="design">
-          <div class="project-thumb" style="--hue: 190">06</div>
-          <div class="project-body">
-            <h3>Kit UI sombre</h3>
-            <p>Bibliothèque de composants pensée pour les interfaces en thème sombre.</p>
-            <ul class="tags"><li>UI</li><li>Design system</li></ul>
-            <div class="project-links">
-              <a href="#" target="_blank" rel="noopener">Voir ↗</a>
-            </div>
+          <p class="mono specs" id="fiche-specs"></p>
+          <div class="fiche-actions">
+            <a href="#serie" class="btn btn-ink" id="fiche-cta">Réserver</a>
+            <span class="mono price">Prix à venir</span>
           </div>
-        </article>
+        </div>
+      </article>
+    </section>
+
+    <!-- ============ ATLAS ============ -->
+    <section id="atlas" class="section section-alt">
+      <div class="wrap">
+        <header class="section-head">
+          <p class="mono eyebrow">L’atlas</p>
+          <h2>Chaque étiquette porte les coordonnées exactes du lieu.</h2>
+          <p class="section-intro">Touchez un point pour ouvrir sa fiche.</p>
+        </header>
+
+        <div class="atlas">
+          <div class="map" id="map">
+            <svg class="graticule" id="graticule" viewBox="0 0 700 380" preserveAspectRatio="none" aria-hidden="true"></svg>
+            <div class="inset" id="inset">
+              <span class="mono inset-title">Encart · Amérique centrale</span>
+            </div>
+            <span class="mono map-scale">Projection plate · graduations tous les 5°</span>
+          </div>
+
+          <ol class="logbook" id="logbook" aria-label="Carnet de bord"></ol>
+        </div>
       </div>
     </section>
 
-    <!-- Contact -->
-    <section id="contact" class="section container">
-      <h2 class="section-title">Contact</h2>
-      <div class="contact-wrap">
-        <div class="contact-intro">
-          <p>Un projet, une question, ou simplement envie d’échanger ? Écrivez-moi, je réponds sous 48 h.</p>
-          <ul class="contact-list">
-            <li><span>Email</span><a href="mailto:contact@exemple.com">contact@exemple.com</a></li>
-            <li><span>GitHub</span><a href="#" target="_blank" rel="noopener">github.com/pseudo</a></li>
-            <li><span>LinkedIn</span><a href="#" target="_blank" rel="noopener">linkedin.com/in/pseudo</a></li>
+    <!-- ============ LA MAISON ============ -->
+    <section id="maison" class="section wrap">
+      <header class="section-head">
+        <p class="mono eyebrow">La maison</p>
+        <h2>Une marque de bougies se copie. Une histoire de couple, non.</h2>
+      </header>
+
+      <div class="pillars">
+        <div class="pillar">
+          <h3>L’intime</h3>
+          <p>Chaque lieu est un souvenir réel. Dans chaque boîte, une carte postale écrite par nous deux raconte pourquoi celui-ci.</p>
+        </div>
+        <div class="pillar">
+          <h3>Le voyage</h3>
+          <p>Un atlas, des coordonnées, un tampon. La collection s’agrandit comme un carnet qu’on remplit, un lieu après l’autre.</p>
+        </div>
+        <div class="pillar">
+          <h3>L’artisanat</h3>
+          <p>Coulées à la main en petites séries numérotées. Cire végétale, mèche en coton, parfums de Grasse conformes IFRA.</p>
+        </div>
+      </div>
+
+      <div class="box">
+        <div class="box-copy">
+          <p class="mono eyebrow">Dans la boîte</p>
+          <h3 class="box-title">Le luxe se joue à l’ouverture.</h3>
+          <ul class="box-list">
+            <li><span class="mono">Le contenant</span>Verre épais teinté de la couleur du lieu, couvercle en chêne. Le nom est gravé sur le pot, qui reste beau une fois la bougie finie.</li>
+            <li><span class="mono">La boîte</span>Papier texturé ivoire, marquage à chaud or. Sous le couvercle, la carte du lieu et un point à l’endroit précis.</li>
+            <li><span class="mono">La carte postale</span>Au dos, quelques lignes de notre main : pourquoi ce lieu.</li>
+            <li><span class="mono">Le tampon</span>Comme un visa, avec la date de coulage et le numéro de lot écrit à la main.</li>
           </ul>
         </div>
+        <div class="box-visual" aria-hidden="true">
+          <div class="postcard">
+            <div class="postcard-left">
+              <p class="postcard-text">Pourquoi Anafi. Parce qu’on y est arrivés par le dernier bateau, et qu’on a failli ne jamais repartir.</p>
+              <p class="postcard-sign">L. &amp; …</p>
+            </div>
+            <div class="postcard-right">
+              <div class="stamp">
+                <span class="stamp-ring mono">ENTRÉE AUTORISÉE · ENTRÉE AUTORISÉE ·</span>
+                <span class="stamp-name">ANAFI</span>
+                <span class="stamp-date mono" id="stamp-date">01·11·26</span>
+              </div>
+              <span class="postcard-lines"></span>
+              <span class="postcard-lines"></span>
+              <span class="postcard-lines"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-        <form class="contact-form" id="contact-form" novalidate>
-          <div class="field">
-            <label for="name">Nom</label>
-            <input type="text" id="name" name="name" autocomplete="name" required>
-            <small class="error" aria-live="polite"></small>
-          </div>
-          <div class="field">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" autocomplete="email" required>
-            <small class="error" aria-live="polite"></small>
-          </div>
-          <div class="field">
-            <label for="message">Message</label>
-            <textarea id="message" name="message" rows="5" required minlength="10"></textarea>
-            <small class="error" aria-live="polite"></small>
-          </div>
-          <button type="submit" class="btn btn-primary">Envoyer</button>
-          <p class="form-status" role="status" aria-live="polite"></p>
-        </form>
+    <!-- ============ RITUEL ============ -->
+    <section id="rituel" class="section section-alt">
+      <div class="wrap rituel">
+        <header class="section-head">
+          <p class="mono eyebrow">Le rituel</p>
+          <h2>Quatre gestes pour que la bougie dure ses 45 heures.</h2>
+        </header>
+        <ol class="steps">
+          <li><span class="mono step-n">I</span><h3>Première combustion</h3><p>Laissez fondre toute la surface, deux à trois heures. La cire ne creusera pas de tunnel.</p></li>
+          <li><span class="mono step-n">II</span><h3>La mèche</h3><p>Recoupez-la à 5 mm avant chaque allumage. La flamme reste calme et ne fume pas.</p></li>
+          <li><span class="mono step-n">III</span><h3>L’extinction</h3><p>Avec le couvercle ou un éteignoir. Jamais en soufflant.</p></li>
+          <li><span class="mono step-n">IV</span><h3>Après</h3><p>Nettoyez le pot à l’eau chaude. Il devient un verre, un vase, une boîte à souvenirs.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ COFFRET ============ -->
+    <section class="section wrap coffret">
+      <div class="coffret-copy">
+        <p class="mono eyebrow">Coffret Atlas</p>
+        <h2>Les six lieux en format voyage.</h2>
+        <p>Six bougies de 70 g dans une boîte qui se déplie comme une carte. Pour choisir son lieu, ou pour offrir la journée entière.</p>
+        <p class="mono specs">6 × 70 g · env. 15 h chacune · Disponible à Noël</p>
+      </div>
+      <div class="coffret-row" id="coffret-row" aria-hidden="true"></div>
+    </section>
+
+    <!-- ============ PREMIÈRE SÉRIE / 7e LIEU ============ -->
+    <section id="serie" class="section section-ink">
+      <div class="wrap">
+        <header class="section-head">
+          <p class="mono eyebrow">Première série numérotée</p>
+          <h2>100 exemplaires par lieu. Pas un de plus.</h2>
+          <p class="section-intro">Inscrivez-vous pour être prévenu avant l’ouverture. Les numéros de lot sont attribués dans l’ordre des réservations.</p>
+        </header>
+
+        <div class="forms">
+          <form class="form" id="form-serie" novalidate>
+            <h3>Réserver un lieu</h3>
+            <div class="field">
+              <label for="s-name">Prénom</label>
+              <input id="s-name" name="name" type="text" autocomplete="given-name" required>
+              <small class="error"></small>
+            </div>
+            <div class="field">
+              <label for="s-email">Email</label>
+              <input id="s-email" name="email" type="email" autocomplete="email" required>
+              <small class="error"></small>
+            </div>
+            <div class="field">
+              <label for="s-place">Lieu</label>
+              <select id="s-place" name="place"></select>
+              <small class="error"></small>
+            </div>
+            <button class="btn btn-paper" type="submit">M’inscrire</button>
+            <p class="form-status" role="status" aria-live="polite"></p>
+          </form>
+
+          <form class="form" id="form-lieu" novalidate>
+            <h3>Le septième lieu</h3>
+            <p class="form-note">La collection s’agrandira. Proposez-nous un endroit et racontez-le en quelques lignes. Si c’est le vôtre qui est choisi, la première bougie vous revient.</p>
+            <div class="field">
+              <label for="l-place">Le lieu</label>
+              <input id="l-place" name="place" type="text" placeholder="Une plage, une rue, une cuisine…" required>
+              <small class="error"></small>
+            </div>
+            <div class="field">
+              <label for="l-why">Pourquoi</label>
+              <textarea id="l-why" name="why" rows="4" required></textarea>
+              <small class="error"></small>
+            </div>
+            <div class="field">
+              <label for="l-email">Email</label>
+              <input id="l-email" name="email" type="email" autocomplete="email" required>
+              <small class="error"></small>
+            </div>
+            <button class="btn btn-paper" type="submit">Proposer ce lieu</button>
+            <p class="form-status" role="status" aria-live="polite"></p>
+          </form>
+        </div>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="container">
-      <p>© <span id="year"></span> Prénom Nom — Fait avec HTML, CSS &amp; JS.</p>
+    <div class="wrap footer-inner">
+      <p class="brand">LATITUDE</p>
+      <p class="mono">Conçues et coulées à la main en France · Cire végétale · Parfums de Grasse conformes IFRA</p>
+      <p class="mono footer-small">© <span id="year">2026</span> Latitude · <a href="https://instagram.com/" target="_blank" rel="noopener">Instagram</a></p>
     </div>
   </footer>
 
