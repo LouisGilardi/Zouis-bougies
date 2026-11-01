@@ -78,13 +78,13 @@ const CATALOGUE = {
       matiere: "Schiste et feuille de vigne",
     },
     {
-      id: "saarah", nom: "SAARAH", titre: "Saarah", region: "Le désert, au crépuscule",
+      id: "saarah", nom: "SAARAH", titre: "Saarah", region: "Erg Zahar, au crépuscule",
       moment: "Crépuscule", heure: "20 h", couleur: "#C98B4E", lot: "002",
-      coords: "Coordonnées à venir", note: "Lieu à préciser",
+      coords: "Coordonnées à venir", note: "Erg Zahar",
       phrase: "L’heure où la dune devient rose.",
-      accroche: "Cardamome, ambre, santal. La chaleur du sable quand le soleil disparaît.",
+      accroche: "Cardamome, ambre, santal. La chaleur des dunes de l’erg Zahar quand le soleil disparaît.",
       histoire: [
-        "Saarah, c’est une heure plus qu’un lieu. Le moment où le soleil touche l’horizon et où le sable passe de l’or au rose.",
+        "Dans l’erg Zahar, les dunes s’étendent jusqu’à l’horizon. Saarah, c’est l’heure où le soleil touche la dernière crête et où le sable passe de l’or au brun.",
         "La chaleur remonte de la dune, l’air se charge d’épices. Un thé à la cardamome chauffe quelque part. On attend la nuit sans rien dire.",
         "Une bougie ambrée et enveloppante, pour les soirs où l’on a besoin de chaleur.",
       ],
