@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prénom Nom — Portfolio</title>
+  <meta name="description" content="Portfolio de Prénom Nom, développeur web.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav container">
+      <a href="#accueil" class="logo">PN<span>.</span></a>
+      <button class="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="menu">
+        <li><a href="#accueil">Accueil</a></li>
+        <li><a href="#projets">Projets</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Accueil -->
+    <section id="accueil" class="hero container">
+      <p class="eyebrow">Bonjour, je suis</p>
+      <h1>Prénom Nom</h1>
+      <h2 class="hero-sub">Développeur web &amp; designer d’interfaces.</h2>
+      <p class="hero-text">
+        Je conçois des sites et applications web simples, rapides et accessibles.
+        J’aime le code propre, les interfaces sobres et les projets qui ont du sens.
+      </p>
+      <div class="hero-actions">
+        <a href="#projets" class="btn btn-primary">Voir mes projets</a>
+        <a href="#contact" class="btn btn-ghost">Me contacter</a>
+      </div>
+    </section>
+
+    <!-- Projets -->
+    <section id="projets" class="section container">
+      <div class="section-head">
+        <h2 class="section-title">Projets</h2>
+        <div class="filters" role="group" aria-label="Filtrer les projets">
+          <button class="filter active" data-filter="all">Tous</button>
+          <button class="filter" data-filter="web">Web</button>
+          <button class="filter" data-filter="design">Design</button>
+          <button class="filter" data-filter="app">App</button>
+        </div>
+      </div>
+
+      <div class="projects-grid">
+        <article class="project-card" data-category="web">
+          <div class="project-thumb" style="--hue: 210">01</div>
+          <div class="project-body">
+            <h3>Site vitrine — Atelier Lumen</h3>
+            <p>Site responsive pour un studio photo, optimisé pour la performance et le SEO.</p>
+            <ul class="tags"><li>HTML</li><li>CSS</li><li>JS</li></ul>
+            <div class="project-links">
+              <a href="#" target="_blank" rel="noopener">Démo ↗</a>
+              <a href="#" target="_blank" rel="noopener">Code ↗</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card" data-category="app">
+          <div class="project-thumb" style="--hue: 160">02</div>
+          <div class="project-body">
+            <h3>Gestionnaire de tâches</h3>
+            <p>Application de to-do avec glisser-déposer et sauvegarde locale.</p>
+            <ul class="tags"><li>JavaScript</li><li>LocalStorage</li></ul>
+            <div class="project-links">
+              <a href="#" target="_blank" rel="noopener">Démo ↗</a>
+              <a href="#" target="_blank" rel="noopener">Code ↗</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card" data-category="design">
+          <div class="project-thumb" style="--hue: 280">03</div>
+          <div class="project-body">
+            <h3>Identité visuelle — Café Nord</h3>
+            <p>Logo, palette et maquettes d’interface pour un café-librairie.</p>
+            <ul class="tags"><li>Figma</li><li>Branding</li></ul>
+            <div class="project-links">
+              <a href="#" target="_blank" rel="noopener">Voir ↗</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card" data-category="web">
+          <div class="project-thumb" style="--hue: 30">04</div>
+          <div class="project-body">
+            <h3>Blog statique</h3>
+            <p>Blog minimaliste généré à partir de fichiers Markdown, mode sombre inclus.</p>
+            <ul class="tags"><li>Markdown</li><li>CSS</li></ul>
+            <div class="project-links">
+              <a href="#" target="_blank" rel="noopener">Démo ↗</a>
+              <a href="#" target="_blank" rel="noopener">Code ↗</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card" data-category="app">
+          <div class="project-thumb" style="--hue: 340">05</div>
+          <div class="project-body">
+            <h3>Météo en temps réel</h3>
+            <p>Petite application consommant une API météo avec géolocalisation.</p>
+            <ul class="tags"><li>API</li><li>Fetch</li></ul>
+            <div class="project-links">
+              <a href="#" target="_blank" rel="noopener">Démo ↗</a>
+              <a href="#" target="_blank" rel="noopener">Code ↗</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card" data-category="design">
+          <div class="project-thumb" style="--hue: 190">06</div>
+          <div class="project-body">
+            <h3>Kit UI sombre</h3>
+            <p>Bibliothèque de composants pensée pour les interfaces en thème sombre.</p>
+            <ul class="tags"><li>UI</li><li>Design system</li></ul>
+            <div class="project-links">
+              <a href="#" target="_blank" rel="noopener">Voir ↗</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section container">
+      <h2 class="section-title">Contact</h2>
+      <div class="contact-wrap">
+        <div class="contact-intro">
+          <p>Un projet, une question, ou simplement envie d’échanger ? Écrivez-moi, je réponds sous 48 h.</p>
+          <ul class="contact-list">
+            <li><span>Email</span><a href="mailto:contact@exemple.com">contact@exemple.com</a></li>
+            <li><span>GitHub</span><a href="#" target="_blank" rel="noopener">github.com/pseudo</a></li>
+            <li><span>LinkedIn</span><a href="#" target="_blank" rel="noopener">linkedin.com/in/pseudo</a></li>
+          </ul>
+        </div>
+
+        <form class="contact-form" id="contact-form" novalidate>
+          <div class="field">
+            <label for="name">Nom</label>
+            <input type="text" id="name" name="name" autocomplete="name" required>
+            <small class="error" aria-live="polite"></small>
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" autocomplete="email" required>
+            <small class="error" aria-live="polite"></small>
+          </div>
+          <div class="field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required minlength="10"></textarea>
+            <small class="error" aria-live="polite"></small>
+          </div>
+          <button type="submit" class="btn btn-primary">Envoyer</button>
+          <p class="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Prénom Nom — Fait avec HTML, CSS &amp; JS.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
