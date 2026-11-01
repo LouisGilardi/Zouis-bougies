@@ -107,14 +107,16 @@ const scripts = (base) => `
 </html>
 `;
 
-const photo = (base, id, name) => `${base}images/${id}/${name}.jpg`;
+/* N'ajoute une photo que si le fichier existe, sinon l'illustration reste affichée. */
+const photo = (base, id, name) =>
+  fs.existsSync(path.join(ROOT, "images", id, `${name}.jpg`)) ? `data-photo="${base}images/${id}/${name}.jpg"` : "";
 
 /* ================= ACCUEIL ================= */
 function home() {
   const base = "";
   const slides = C.lieux.map((l, i) => `
           <div class="hero-slide${i === 0 ? " on" : ""}" data-name="${l.nom}" data-coords="${esc(l.coords)}" data-href="bougies/${l.id}.html">
-            <div class="visual" data-scene="${l.id}" data-photo="${photo(base, l.id, "lieu")}" data-alt="${esc(l.titre)}"></div>
+            <div class="visual" data-scene="${l.id}" ${photo(base, l.id, "lieu")} data-alt="${esc(l.titre)}"></div>
           </div>`);
   // ordre du diaporama : Anafi d'abord
   const order = ["anafi", "sahara", "moux", "meribel", "fregeneuil", "paris"].map((id) => slides[C.lieux.findIndex((l) => l.id === id)]);
@@ -123,8 +125,8 @@ function home() {
         <article class="card">
           <a class="card-media" href="bougies/${l.id}.html" aria-label="${esc(l.titre)}, voir la bougie">
             <span class="card-moment">${l.heure} · ${l.moment}</span>
-            <div class="visual" data-scene="${l.id}" data-photo="${photo(base, l.id, "lieu")}" data-alt="${esc(l.titre)}"></div>
-            <div class="packshot" style="--c:${l.couleur}" data-jar="${l.id}" data-photo="${photo(base, l.id, "bougie")}"></div>
+            <div class="visual" data-scene="${l.id}" ${photo(base, l.id, "lieu")} data-alt="${esc(l.titre)}"></div>
+            <div class="packshot" style="--c:${l.couleur}" data-jar="${l.id}" ${photo(base, l.id, "bougie")}></div>
           </a>
           <div class="card-info">
             <a href="bougies/${l.id}.html" class="card-name">${l.nom}</a>
@@ -169,7 +171,7 @@ function home() {
 
     <section class="section wrap" style="padding-top:0">
       <div class="story">
-        <div class="visual" data-scene="moux" data-photo="${photo(base, "moux", "histoire")}"></div>
+        <div class="visual" data-scene="moux" ${photo(base, "moux", "histoire")}></div>
         <div class="stack" style="gap:1.4rem">
           <p class="eyebrow">Notre idée</p>
           <h2>On ne vend pas une odeur. On vend un endroit.</h2>
@@ -234,14 +236,14 @@ function product(l, i) {
     <section class="product wrap">
       <div class="gallery">
         <div class="thumbs" role="group" aria-label="Choisir une image">
-          <button type="button" class="thumb" data-slide="lieu" aria-pressed="true" aria-label="Le lieu"><div class="visual" data-scene="${l.id}" data-photo="${photo(base, l.id, "lieu")}"></div></button>
-          <button type="button" class="thumb" data-slide="bougie" aria-pressed="false" aria-label="La bougie"><div class="packshot" style="--c:${l.couleur}" data-jar="${l.id}" data-flame="0" data-photo="${photo(base, l.id, "bougie")}"></div></button>
-          <button type="button" class="thumb" data-slide="detail" aria-pressed="false" aria-label="La matière"><div class="visual" data-scene="${l.id}" data-variant="detail" data-photo="${photo(base, l.id, "detail")}"></div></button>
+          <button type="button" class="thumb" data-slide="lieu" aria-pressed="true" aria-label="Le lieu"><div class="visual" data-scene="${l.id}" ${photo(base, l.id, "lieu")}></div></button>
+          <button type="button" class="thumb" data-slide="bougie" aria-pressed="false" aria-label="La bougie"><div class="packshot" style="--c:${l.couleur}" data-jar="${l.id}" data-flame="0" ${photo(base, l.id, "bougie")}></div></button>
+          <button type="button" class="thumb" data-slide="detail" aria-pressed="false" aria-label="La matière"><div class="visual" data-scene="${l.id}" data-variant="detail" ${photo(base, l.id, "detail")}></div></button>
         </div>
         <div class="gallery-main" id="gallery-main">
-          <div class="gallery-slide on" data-slide="lieu"><div class="visual" data-scene="${l.id}" data-photo="${photo(base, l.id, "lieu")}" data-alt="${esc(nom)}, le lieu"></div><span class="gallery-cap">${esc(l.region)}</span></div>
-          <div class="gallery-slide" data-slide="bougie"><div class="packshot" style="--c:${l.couleur}" data-jar="${l.id}" data-photo="${photo(base, l.id, "bougie")}" data-alt="Bougie ${esc(nom)}"></div><span class="gallery-cap">Bougie 200 g · Lot n° ${l.lot}</span></div>
-          <div class="gallery-slide" data-slide="detail"><div class="visual" data-scene="${l.id}" data-variant="detail" data-photo="${photo(base, l.id, "detail")}" data-alt="${esc(l.matiere)}"></div><span class="gallery-cap">${esc(l.matiere)}</span></div>
+          <div class="gallery-slide on" data-slide="lieu"><div class="visual" data-scene="${l.id}" ${photo(base, l.id, "lieu")} data-alt="${esc(nom)}, le lieu"></div><span class="gallery-cap">${esc(l.region)}</span></div>
+          <div class="gallery-slide" data-slide="bougie"><div class="packshot" style="--c:${l.couleur}" data-jar="${l.id}" ${photo(base, l.id, "bougie")} data-alt="Bougie ${esc(nom)}"></div><span class="gallery-cap">Bougie 200 g · Lot n° ${l.lot}</span></div>
+          <div class="gallery-slide" data-slide="detail"><div class="visual" data-scene="${l.id}" data-variant="detail" ${photo(base, l.id, "detail")} data-alt="${esc(l.matiere)}"></div><span class="gallery-cap">${esc(l.matiere)}</span></div>
         </div>
       </div>
 
@@ -298,7 +300,7 @@ function product(l, i) {
     </section>
 
     <section aria-labelledby="histoire">
-      <div class="visual tale-hero" data-scene="${l.id}" data-photo="${photo(base, l.id, "histoire")}" data-alt="${esc(nom)}"></div>
+      <div class="visual tale-hero" data-scene="${l.id}" ${photo(base, l.id, "histoire")} data-alt="${esc(nom)}"></div>
       <div class="section wrap tale">
         <div class="tale-aside">
           <p class="eyebrow">L’histoire</p>
@@ -313,9 +315,9 @@ function product(l, i) {
     <section class="section wrap" style="padding-top:0" aria-labelledby="parfum">
       <div class="section-head"><div class="stack"><p class="eyebrow">Le parfum</p><h2 id="parfum">Trois temps, comme une promenade.</h2></div><p class="intro">Les notes de tête s’ouvrent à l’allumage. Le cœur s’installe après quelques minutes. Le fond reste dans la pièce une fois la bougie éteinte.</p></div>
       <div class="pyramid">
-        <div class="tier"><div class="visual" data-scene="${l.id}" data-variant="detail" data-photo="${photo(base, l.id, "detail")}"></div><h3>Tête</h3><p>${esc(l.tete)}</p><small>À l’allumage</small></div>
+        <div class="tier"><div class="visual" data-scene="${l.id}" data-variant="detail" ${photo(base, l.id, "detail")}></div><h3>Tête</h3><p>${esc(l.tete)}</p><small>À l’allumage</small></div>
         <div class="tier"><div class="packshot" style="--c:${l.couleur};aspect-ratio:1"><div data-jar="${l.id}" data-flame="0" style="width:46%"></div></div><h3>Cœur</h3><p>${esc(l.coeur)}</p><small>Après quelques minutes</small></div>
-        <div class="tier"><div class="visual" data-scene="${l.id}" data-photo="${photo(base, l.id, "lieu")}"></div><h3>Fond</h3><p>${esc(l.fond)}</p><small>Ce qui reste</small></div>
+        <div class="tier"><div class="visual" data-scene="${l.id}" ${photo(base, l.id, "lieu")}></div><h3>Fond</h3><p>${esc(l.fond)}</p><small>Ce qui reste</small></div>
       </div>
     </section>
 
@@ -326,7 +328,7 @@ function product(l, i) {
         <p>« ${esc(next.phrase)} »</p>
         <span class="link" style="align-self:flex-start">Découvrir</span>
       </div>
-      <div class="visual" data-scene="${next.id}" data-photo="${photo(base, next.id, "lieu")}"></div>
+      <div class="visual" data-scene="${next.id}" ${photo(base, next.id, "lieu")}></div>
     </a>
 
     <section class="section wrap">
@@ -335,8 +337,8 @@ function product(l, i) {
         <article class="card">
           <a class="card-media" href="${o.id}.html" aria-label="${esc(o.titre)}">
             <span class="card-moment">${o.heure} · ${o.moment}</span>
-            <div class="visual" data-scene="${o.id}" data-photo="${photo(base, o.id, "lieu")}"></div>
-            <div class="packshot" style="--c:${o.couleur}" data-jar="${o.id}" data-photo="${photo(base, o.id, "bougie")}"></div>
+            <div class="visual" data-scene="${o.id}" ${photo(base, o.id, "lieu")}></div>
+            <div class="packshot" style="--c:${o.couleur}" data-jar="${o.id}" ${photo(base, o.id, "bougie")}></div>
           </a>
           <div class="card-info"><a href="${o.id}.html" class="card-name">${o.nom}</a><span class="card-price">${euro(prixMin)}</span><p class="card-sub">${esc(o.accroche)}</p></div>
           <button type="button" class="card-add" data-add="${o.id}" data-format="200">Ajouter au panier</button>
