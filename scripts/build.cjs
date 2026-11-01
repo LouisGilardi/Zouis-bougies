@@ -313,9 +313,9 @@ function product(l, i) {
     <section class="section wrap" style="padding-top:0" aria-labelledby="parfum">
       <div class="section-head"><div class="stack"><p class="eyebrow">Le parfum</p><h2 id="parfum">Trois temps, comme une promenade.</h2></div><p class="intro">Les notes de tête s’ouvrent à l’allumage. Le cœur s’installe après quelques minutes. Le fond reste dans la pièce une fois la bougie éteinte.</p></div>
       <div class="pyramid">
-        <div class="tier"><div class="visual" data-scene="${l.id}" data-variant="detail"></div><h3>Tête</h3><p>${esc(l.tete)}</p><small>À l’allumage</small></div>
+        <div class="tier"><div class="visual" data-scene="${l.id}" data-variant="detail" data-photo="${photo(base, l.id, "detail")}"></div><h3>Tête</h3><p>${esc(l.tete)}</p><small>À l’allumage</small></div>
         <div class="tier"><div class="packshot" style="--c:${l.couleur};aspect-ratio:1"><div data-jar="${l.id}" data-flame="0" style="width:46%"></div></div><h3>Cœur</h3><p>${esc(l.coeur)}</p><small>Après quelques minutes</small></div>
-        <div class="tier"><div class="visual" data-scene="${l.id}"></div><h3>Fond</h3><p>${esc(l.fond)}</p><small>Ce qui reste</small></div>
+        <div class="tier"><div class="visual" data-scene="${l.id}" data-photo="${photo(base, l.id, "lieu")}"></div><h3>Fond</h3><p>${esc(l.fond)}</p><small>Ce qui reste</small></div>
       </div>
     </section>
 
