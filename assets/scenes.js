@@ -29,7 +29,7 @@ const SCENES = (() => {
         <rect x="430" y="860" width="380" height="140" fill="#F6F3EC"/>
       </g>`;
     },
-    saarah(u) {
+    sahara(u) {
       return `
       <defs>
         <linearGradient id="${u}k" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#D8C6CC"/><stop offset=".55" stop-color="#F0C9A8"/><stop offset="1" stop-color="#F5DCC0"/></linearGradient>
@@ -92,65 +92,52 @@ const SCENES = (() => {
       </g>
       <g fill="#7B7398"><ellipse cx="120" cy="768" rx="7" ry="11"/><ellipse cx="676" cy="812" rx="7" ry="11"/></g>`;
     },
-    chamblac(u) {
-      const trees = [[90, 700, 70], [250, 690, 58], [610, 705, 66], [730, 690, 50]];
-      let orchard = "";
-      trees.forEach(([x, y, r], k) => {
-        orchard += `<rect x="${x - 5}" y="${y}" width="10" height="${r + 30}" fill="#3B2B22"/><circle cx="${x}" cy="${y}" r="${r}" fill="${k % 2 ? "#3F5133" : "#4A5E3A"}"/>`;
-        for (let j = 0; j < 6; j++) orchard += `<circle cx="${x - r * .6 + (j * 37) % (r * 1.2)}" cy="${y - r * .4 + (j * 23) % (r * .9)}" r="5" fill="#B84A35"/>`;
-      });
-      let rain = "";
-      for (let i = 0; i < 60; i++) { const x = (i * 137) % 820, y = (i * 263) % 640; rain += `<line x1="${x}" y1="${y}" x2="${x - 8}" y2="${y + 34}"/>`; }
+    paris(u) {
       return `
       <defs>
-        <linearGradient id="${u}k" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4E5866"/><stop offset="1" stop-color="#9AA0A3"/></linearGradient>
-        <radialGradient id="${u}g" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#F6C77E" stop-opacity=".7"/><stop offset="1" stop-color="#F6C77E" stop-opacity="0"/></radialGradient>
+        <linearGradient id="${u}k" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#C3C9CF"/><stop offset="1" stop-color="#E4E2DB"/></linearGradient>
+        <radialGradient id="${u}l" cx=".15" cy=".8" r=".55"><stop offset="0" stop-color="#F2C98A" stop-opacity=".45"/><stop offset="1" stop-color="#F2C98A" stop-opacity="0"/></radialGradient>
       </defs>
-      <rect width="800" height="1000" fill="url(#${u}k)"/>
-      <path d="M0 600 C200 560 420 590 800 555 V1000 H0Z" fill="#5E6B4D"/>
-      <path d="M0 640 C160 615 300 640 460 625 S700 600 800 620" fill="none" stroke="#3F4A33" stroke-width="16" stroke-linecap="round"/>
-      <g>
-        <path d="M330 520 L470 420 L610 520Z" fill="#4A3A32"/>
-        <rect x="350" y="520" width="240" height="190" fill="#EDE3D2"/>
-        <g stroke="#5A3E2E" stroke-width="9">
-          <line x1="350" y1="520" x2="590" y2="520"/><line x1="350" y1="615" x2="590" y2="615"/><line x1="350" y1="708" x2="590" y2="708"/>
-          <line x1="352" y1="520" x2="352" y2="710"/><line x1="430" y1="520" x2="430" y2="710"/><line x1="510" y1="520" x2="510" y2="710"/><line x1="588" y1="520" x2="588" y2="710"/>
-          <line x1="352" y1="615" x2="430" y2="520"/><line x1="510" y1="520" x2="588" y2="615"/>
-        </g>
-        <circle cx="470" cy="660" r="70" fill="url(#${u}g)"/>
-        <rect x="448" y="635" width="44" height="50" fill="#F2C27A"/>
-        <rect x="560" y="400" width="22" height="70" fill="#5A4A40"/>
+      <rect width="800" height="1000" fill="#45474C"/>
+      <rect x="190" y="110" width="420" height="720" fill="url(#${u}k)"/>
+      <path d="M190 640 L250 640 L250 600 L268 600 L268 640 L330 640 L360 610 L430 610 L460 640 L520 640 L520 590 L540 590 L540 640 L610 640 V830 H190Z" fill="#8D9197"/>
+      <g fill="#F3E3C2" opacity=".9"><rect x="280" y="680" width="16" height="24"/><rect x="470" y="672" width="16" height="24"/><rect x="380" y="700" width="16" height="24"/></g>
+      <rect x="190" y="110" width="420" height="720" fill="none" stroke="#ECE7DD" stroke-width="16"/>
+      <line x1="400" y1="110" x2="400" y2="830" stroke="#ECE7DD" stroke-width="10"/>
+      <line x1="190" y1="350" x2="610" y2="350" stroke="#ECE7DD" stroke-width="8"/>
+      <line x1="190" y1="590" x2="610" y2="590" stroke="#ECE7DD" stroke-width="8"/>
+      <rect x="150" y="826" width="500" height="22" fill="#D9D3C7"/>
+      <rect y="880" width="800" height="120" fill="#6E5641"/>
+      <g stroke="#5A4533" stroke-width="2">
+        <path d="M0 940 L60 900 L120 940 L180 900 L240 940 L300 900 L360 940 L420 900 L480 940 L540 900 L600 940 L660 900 L720 940 L780 900 L840 940"/>
+        <path d="M0 1000 L60 960 L120 1000 L180 960 L240 1000 L300 960 L360 1000 L420 960 L480 1000 L540 960 L600 1000 L660 960 L720 1000 L780 960 L840 1000"/>
       </g>
-      ${orchard}
-      <path d="M0 800 C260 780 520 810 800 790 V1000 H0Z" fill="#4E5B3E"/>
-      <g stroke="#E3E8EC" stroke-opacity=".35" stroke-width="2">${rain}</g>`;
+      <rect width="800" height="1000" fill="url(#${u}l)"/>`;
     },
-    venise(u) {
-      let poles = "";
-      [[300, "#2F5D8A"], [340, "#A4402F"], [380, "#2F5D8A"]].forEach(([x, c]) => {
-        poles += `<rect x="${x}" y="610" width="12" height="190" fill="#F3EFE6"/>`;
-        for (let k = 0; k < 6; k++) poles += `<rect x="${x}" y="${616 + k * 30}" width="12" height="14" fill="${c}"/>`;
+    meribel(u) {
+      const firs = [[60, 760, 1.2], [130, 790, 1.5], [210, 770, 1], [620, 780, 1.3], [700, 760, 1.6], [760, 800, 1.1], [300, 820, 1.4]];
+      let trees = "";
+      firs.forEach(([x, y, s]) => {
+        trees += `<path d="M${x} ${y - 150 * s} L${x + 46 * s} ${y} L${x - 46 * s} ${y}Z" fill="#24382E"/><path d="M${x} ${y - 150 * s} L${x + 14 * s} ${y - 108 * s} L${x - 14 * s} ${y - 108 * s}Z" fill="#F4F6F8"/>`;
       });
       return `
       <defs>
-        <linearGradient id="${u}k" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2C5FA8"/><stop offset="1" stop-color="#8FB2DA"/></linearGradient>
-        <linearGradient id="${u}w" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4F8C8C"/><stop offset="1" stop-color="#2F5F63"/></linearGradient>
+        <linearGradient id="${u}k" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5E8CC0"/><stop offset="1" stop-color="#CFE0EE"/></linearGradient>
       </defs>
       <rect width="800" height="1000" fill="url(#${u}k)"/>
-      <rect x="0" y="420" width="250" height="400" fill="#D9C2A0"/>
-      <g fill="#7A6A58" opacity=".55">${[0, 1, 2, 3].map((r) => [30, 90, 150, 200].map((c) => `<path d="M${c} ${470 + r * 85} v-26 a14 14 0 0 1 28 0 v26Z"/>`).join("")).join("")}</g>
-      <rect x="250" y="500" width="70" height="320" fill="#B9A58A"/>
-      <rect x="470" y="200" width="330" height="620" fill="#EFE7D8"/>
-      <rect x="470" y="200" width="330" height="22" fill="#D8CDBA"/>
-      <path d="M520 200 L534 120 L548 200Z" fill="#B8A98F"/>
-      <g fill="#5E5A52" opacity=".75">${[0, 1, 2, 3, 4].map((r) => [500, 570, 640, 710].map((c) => `<rect x="${c}" y="${250 + r * 110}" width="34" height="64"/>`).join("")).join("")}</g>
-      <rect y="800" width="800" height="200" fill="url(#${u}w)"/>
-      ${poles}
-      <g stroke="#E4F0EC" stroke-opacity=".5" stroke-width="2"><line x1="40" y1="850" x2="200" y2="850"/><line x1="260" y1="900" x2="420" y2="900"/><line x1="90" y1="950" x2="240" y2="950"/></g>
-      <path d="M430 880 L800 850 L800 930 L470 930 Q440 915 430 880Z" fill="#7A4524"/>
-      <path d="M520 870 L740 852 L740 880 L530 892Z" fill="#B8743E"/>
-      <path d="M560 862 h120 v-26 h-110Z" fill="#3B2A1E"/>
-      <path d="M380 930 Q480 940 560 930" fill="none" stroke="#F3F7F4" stroke-width="5" stroke-opacity=".7"/>`;
+      <path d="M0 520 L140 330 L230 420 L360 250 L480 400 L590 300 L800 480 V700 H0Z" fill="#A9BACB"/>
+      <path d="M140 330 L190 400 L170 395 L150 420 L120 360Z M360 250 L420 330 L395 325 L370 350 L330 300Z M590 300 L650 360 L620 355 L600 375 L570 330Z" fill="#FFFFFF"/>
+      <path d="M0 640 C200 590 420 620 800 580 V1000 H0Z" fill="#E9EEF2"/>
+      <g>
+        <path d="M400 560 L520 500 L640 560Z" fill="#FFFFFF"/>
+        <rect x="420" y="560" width="200" height="130" fill="#8A6142"/>
+        <rect x="420" y="640" width="200" height="50" fill="#9C9690"/>
+        <rect x="450" y="585" width="36" height="40" fill="#F2C27A"/><rect x="554" y="585" width="36" height="40" fill="#F2C27A"/>
+        <rect x="585" y="505" width="18" height="40" fill="#6E6A66"/>
+      </g>
+      <path d="M0 760 C220 720 520 760 800 730 V1000 H0Z" fill="#F7F9FB"/>
+      ${trees}
+      <path d="M0 880 C260 850 520 880 800 860 V1000 H0Z" fill="#FFFFFF"/>`;
     },
   };
 

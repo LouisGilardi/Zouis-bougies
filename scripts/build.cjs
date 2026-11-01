@@ -117,7 +117,7 @@ function home() {
             <div class="visual" data-scene="${l.id}" data-photo="${photo(base, l.id, "lieu")}" data-alt="${esc(l.titre)}"></div>
           </div>`);
   // ordre du diaporama : Anafi d'abord
-  const order = ["anafi", "moux", "venise", "saarah", "fregeneuil", "chamblac"].map((id) => slides[C.lieux.findIndex((l) => l.id === id)]);
+  const order = ["anafi", "sahara", "moux", "meribel", "fregeneuil", "paris"].map((id) => slides[C.lieux.findIndex((l) => l.id === id)]);
 
   const cards = C.lieux.map((l) => `
         <article class="card">
@@ -142,7 +142,7 @@ function home() {
         <div class="hero-copy">
           <p class="eyebrow">Bougies parfumées · Coulées à la main en France</p>
           <h1>Allumez<br>un <em>lieu</em>.</h1>
-          <p class="lede">Une île des Cyclades, un village des Corbières, une maison normande un soir d’hiver. Six bougies pour retourner là où l’on a été heureux.</p>
+          <p class="lede">Une île des Cyclades, un village des Corbières, un dimanche d’hiver à Paris. Six bougies pour retourner là où l’on a été heureux.</p>
           <div class="hero-actions">
             <a href="#collection" class="btn">Découvrir la collection</a>
             <a href="#coffret" class="link">Le coffret</a>

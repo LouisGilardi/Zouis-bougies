@@ -10,6 +10,6 @@ automatiquement à la place des illustrations. Pas besoin de toucher au code.
 | `detail.jpg`   | Galerie (la matière : pierre, sable, parquet…)     | portrait 4:5, 1600 px   |
 | `histoire.jpg` | Grande image au-dessus du récit                    | paysage 21:9, 2400 px   |
 
-Dossiers : `anafi/`, `saarah/`, `moux/`, `fregeneuil/`, `chamblac/`, `venise/`.
+Dossiers : `anafi/`, `paris/`, `fregeneuil/`, `sahara/`, `meribel/`, `moux/`.
 
 Compressez les photos (moins de 400 Ko chacune), par exemple avec squoosh.app.
