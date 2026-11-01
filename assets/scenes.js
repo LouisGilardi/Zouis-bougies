@@ -114,26 +114,32 @@ const SCENES = (() => {
       </g>
       <rect width="800" height="1000" fill="url(#${u}l)"/>`;
     },
-    "costa-rica"(u) {
-      const r = rand(11);
-      const greens = ["#2E4A32", "#3E6B45", "#4F7F52", "#5E8F5A", "#365A3A", "#6F9B62"];
-      let leaves = "";
-      for (let i = 0; i < 38; i++) {
-        const x = r() * 900 - 50, y = 200 + r() * 860, rx = 70 + r() * 110, ry = 24 + r() * 34, a = -70 + r() * 140;
-        const c = greens[Math.floor(r() * greens.length)];
-        leaves += `<g transform="translate(${x.toFixed(0)} ${y.toFixed(0)}) rotate(${a.toFixed(0)})"><ellipse rx="${rx.toFixed(0)}" ry="${ry.toFixed(0)}" fill="${c}"/><line x1="${(-rx).toFixed(0)}" x2="${rx.toFixed(0)}" stroke="#1E3322" stroke-opacity=".35" stroke-width="2"/></g>`;
-      }
-      let drops = "";
-      for (let i = 0; i < 26; i++) drops += `<circle cx="${(r() * 800).toFixed(0)}" cy="${(r() * 1000).toFixed(0)}" r="${(2 + r() * 3).toFixed(1)}" fill="#E6F0E2" opacity=".55"/>`;
+    venise(u) {
+      let poles = "";
+      [[300, "#2F5D8A"], [340, "#A4402F"], [380, "#2F5D8A"]].forEach(([x, c]) => {
+        poles += `<rect x="${x}" y="610" width="12" height="190" fill="#F3EFE6"/>`;
+        for (let k = 0; k < 6; k++) poles += `<rect x="${x}" y="${616 + k * 30}" width="12" height="14" fill="${c}"/>`;
+      });
       return `
       <defs>
-        <linearGradient id="${u}k" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#B9C7B5"/><stop offset=".4" stop-color="#5D7A5C"/><stop offset="1" stop-color="#1E3322"/></linearGradient>
-        <filter id="${u}b" x="-10%" y="-50%" width="120%" height="200%"><feGaussianBlur stdDeviation="30"/></filter>
+        <linearGradient id="${u}k" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2C5FA8"/><stop offset="1" stop-color="#8FB2DA"/></linearGradient>
+        <linearGradient id="${u}w" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4F8C8C"/><stop offset="1" stop-color="#2F5F63"/></linearGradient>
       </defs>
       <rect width="800" height="1000" fill="url(#${u}k)"/>
-      <rect y="150" width="800" height="140" fill="#E8EEE6" opacity=".5" filter="url(#${u}b)"/>
-      ${leaves}
-      ${drops}`;
+      <rect x="0" y="420" width="250" height="400" fill="#D9C2A0"/>
+      <g fill="#7A6A58" opacity=".55">${[0, 1, 2, 3].map((r) => [30, 90, 150, 200].map((c) => `<path d="M${c} ${470 + r * 85} v-26 a14 14 0 0 1 28 0 v26Z"/>`).join("")).join("")}</g>
+      <rect x="250" y="500" width="70" height="320" fill="#B9A58A"/>
+      <rect x="470" y="200" width="330" height="620" fill="#EFE7D8"/>
+      <rect x="470" y="200" width="330" height="22" fill="#D8CDBA"/>
+      <path d="M520 200 L534 120 L548 200Z" fill="#B8A98F"/>
+      <g fill="#5E5A52" opacity=".75">${[0, 1, 2, 3, 4].map((r) => [500, 570, 640, 710].map((c) => `<rect x="${c}" y="${250 + r * 110}" width="34" height="64"/>`).join("")).join("")}</g>
+      <rect y="800" width="800" height="200" fill="url(#${u}w)"/>
+      ${poles}
+      <g stroke="#E4F0EC" stroke-opacity=".5" stroke-width="2"><line x1="40" y1="850" x2="200" y2="850"/><line x1="260" y1="900" x2="420" y2="900"/><line x1="90" y1="950" x2="240" y2="950"/></g>
+      <path d="M430 880 L800 850 L800 930 L470 930 Q440 915 430 880Z" fill="#7A4524"/>
+      <path d="M520 870 L740 852 L740 880 L530 892Z" fill="#B8743E"/>
+      <path d="M560 862 h120 v-26 h-110Z" fill="#3B2A1E"/>
+      <path d="M380 930 Q480 940 560 930" fill="none" stroke="#F3F7F4" stroke-width="5" stroke-opacity=".7"/>`;
     },
   };
 

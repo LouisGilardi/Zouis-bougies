@@ -117,7 +117,7 @@ function home() {
             <div class="visual" data-scene="${l.id}" data-photo="${photo(base, l.id, "lieu")}" data-alt="${esc(l.titre)}"></div>
           </div>`);
   // ordre du diaporama : Anafi d'abord
-  const order = ["anafi", "moux", "paris", "fregeneuil", "saarah", "costa-rica"].map((id) => slides[C.lieux.findIndex((l) => l.id === id)]);
+  const order = ["anafi", "moux", "venise", "saarah", "fregeneuil", "paris"].map((id) => slides[C.lieux.findIndex((l) => l.id === id)]);
 
   const cards = C.lieux.map((l) => `
         <article class="card">
@@ -161,7 +161,7 @@ function home() {
     <section class="section wrap" id="collection">
       <div class="section-head">
         <div class="stack"><p class="eyebrow">La collection</p><h2>Six lieux, une journée.</h2></div>
-        <p class="intro">Chaque bougie porte une heure du jour, de la brume du matin à la forêt après la pluie.</p>
+        <p class="intro">Chaque bougie porte une heure du jour, de la brume du matin aux soirées d’hiver.</p>
       </div>
       <div class="grid">${cards}
       </div>

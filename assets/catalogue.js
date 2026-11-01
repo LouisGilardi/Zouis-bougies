@@ -36,6 +36,20 @@ const CATALOGUE = {
       matiere: "Bois flotté, eau de la Charente",
     },
     {
+      id: "venise", nom: "VENISE", titre: "Venise", region: "Grand Canal, Venise",
+      moment: "Matin d’hiver", heure: "10 h", couleur: "#3F6F73", lot: "006",
+      coords: "45°26′N · 12°20′E",
+      phrase: "Le sillage d’un bateau sur l’eau verte.",
+      accroche: "Accord lagune, iris, bois verni. Le Grand Canal par un matin d’hiver, sous un ciel sans nuage.",
+      histoire: [
+        "Un matin d’hiver sur le Grand Canal. Le ciel est d’un bleu dur, l’air froid et clair. Les palais ont les pieds dans l’eau et la pierre blanche prend toute la lumière.",
+        "Les bateaux-taxis passent en laissant un sillage d’écume. Leur coque en bois verni brille comme un meuble ancien. Les pieux rayés bleu et blanc se balancent à peine.",
+        "Nous avons voulu garder cette fraîcheur iodée, l’odeur du bois ciré et de la pierre mouillée. Une bougie lumineuse pour les matins où l’on a envie de partir.",
+      ],
+      tete: "Accord lagune, bergamote", coeur: "Iris, fleur d’oranger", fond: "Bois verni, ambre, musc blanc",
+      matiere: "Bois verni et pierre d’Istrie",
+    },
+    {
       id: "anafi", nom: "ANAFI", titre: "Anafi", region: "Cyclades, Grèce",
       moment: "Midi", heure: "12 h", couleur: "#2F5D8A", lot: "001",
       coords: "36°21′N · 25°46′E",
@@ -90,20 +104,6 @@ const CATALOGUE = {
       ],
       tete: "Thé noir, poivre rose", coeur: "Iris poudré, rose", fond: "Parquet ciré, tabac blond",
       matiere: "Parquet en point de Hongrie",
-    },
-    {
-      id: "costa-rica", nom: "COSTA RICA", titre: "Costa Rica", region: "Forêt de nuages",
-      moment: "Après la pluie", heure: "Nuit", couleur: "#2E4A32", lot: "006",
-      coords: "≈ 10°N · 84°W", note: "Position indicative",
-      phrase: "La forêt respire enfin.",
-      accroche: "Feuilles mouillées, café, cacao. La forêt tropicale juste après l’averse.",
-      histoire: [
-        "Dans les forêts de nuages du Costa Rica, la pluie arrive presque chaque après-midi, puis s’arrête d’un coup.",
-        "Alors tout ruisselle. Les feuilles immenses s’égouttent, la terre fume, les oiseaux reprennent. Dans les fermes voisines, on fait sécher le café et le cacao.",
-        "Une bougie profonde et gourmande, pour faire entrer la forêt dans la maison.",
-      ],
-      tete: "Fruit de la passion, feuilles mouillées", coeur: "Café, fleur de frangipanier", fond: "Cacao, vanille, vétiver",
-      matiere: "Feuilles tropicales mouillées",
     },
   ],
 };
